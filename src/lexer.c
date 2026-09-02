@@ -102,6 +102,9 @@ Token lexer_next_token(Lexer *lexer)
     case '+':
         advance(lexer);
         return make_token(TOKEN_PLUS, token_start, 1);
+    case '-':
+        advance(lexer);
+        return make_token(TOKEN_MINUS, token_start, 1);
     case ';':
         advance(lexer);
         return make_token(TOKEN_SEMICOLON, token_start, 1);
@@ -126,6 +129,8 @@ const char *token_type_name(TokenType type)
         return "TOKEN_NUMBER";
     case TOKEN_PLUS:
         return "TOKEN_PLUS";
+    case TOKEN_MINUS:
+        return "TOKEN_MINUS";
     case TOKEN_SEMICOLON:
         return "TOKEN_SEMICOLON";
     case TOKEN_EOF:

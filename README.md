@@ -3,7 +3,7 @@
 TinyLang 컴파일러의 첫 단계인 Lexer입니다. 다음 코드를 토큰으로 나눕니다.
 
 ```text
-var x = 10 + 20;
+var x = 10 + 20 - 5;
 ```
 
 ## 프로젝트 구조
@@ -42,13 +42,15 @@ make run
 `make run`을 실행하면 다음과 같이 출력됩니다.
 
 ```text
-./build/tinylang "var x = 10 + 20;"
+./build/tinylang "var x = 10 + 20 - 5;"
 TOKEN_VAR
 TOKEN_IDENTIFIER(x)
 TOKEN_EQUAL
 TOKEN_NUMBER(10)
 TOKEN_PLUS
 TOKEN_NUMBER(20)
+TOKEN_MINUS
+TOKEN_NUMBER(5)
 TOKEN_SEMICOLON
 TOKEN_EOF
 ```
@@ -63,7 +65,7 @@ TOKEN_EOF
 
 ```sh
 ./build/tinylang
-var x = 10 + 20;
+var x = 10 + 20 - 5;
 ```
 
 빌드 결과를 지우려면 다음을 실행합니다.

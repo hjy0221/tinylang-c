@@ -9,6 +9,7 @@ typedef enum {
     TOKEN_EQUAL,
     TOKEN_NUMBER,
     TOKEN_PLUS,
+    TOKEN_MINUS,
     TOKEN_SEMICOLON,
     TOKEN_EOF,
     TOKEN_ERROR

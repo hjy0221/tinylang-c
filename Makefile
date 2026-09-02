@@ -17,7 +17,7 @@ build:
 	mkdir -p build
 
 run: $(TARGET)
-	./$(TARGET) "var x = 10 + 20;"
+	./$(TARGET) "var x = 10 + 20 - 5;"
 
 clean:
 	rm -rf build
