@@ -37,6 +37,22 @@ make
 make run
 ```
 
+## 실행 결과
+
+`make run`을 실행하면 다음과 같이 출력됩니다.
+
+```text
+./build/tinylang "var x = 10 + 20;"
+TOKEN_VAR
+TOKEN_IDENTIFIER(x)
+TOKEN_EQUAL
+TOKEN_NUMBER(10)
+TOKEN_PLUS
+TOKEN_NUMBER(20)
+TOKEN_SEMICOLON
+TOKEN_EOF
+```
+
 직접 코드를 넘길 수도 있습니다.
 
 ```sh
