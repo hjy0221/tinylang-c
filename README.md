@@ -1,5 +1,75 @@
 # TinyLang Lexer in C
 
+[日本語](https://github.com/hjy0221/tinylang-c#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/tinylang-c#english) · [한국어](https://github.com/hjy0221/tinylang-c#%ED%95%9C%EA%B5%AD%EC%96%B4)
+
+## 日本語
+
+TinyLang コンパイラーの第一段階である字句解析器です。`var x = 10 + 20 - 5;` のようなソースコードをトークンに分割します。
+
+### 構成
+
+`include/` にヘッダー、`src/` に字句解析器とメインプログラム、ルートに Makefile があります。
+
+### ビルドと実行
+
+Makefile のある `tinylang-c` ディレクトリで実行します。
+
+```sh
+cd tinylang-c
+make
+make run
+```
+
+コードを直接渡すこともできます。
+
+```sh
+./build/tinylang "var value = 7 + 5;"
+```
+
+引数がない場合は標準入力から一行を読み取ります。`make clean` でビルド成果物を削除します。
+
+### 処理
+
+1. `main.c` がソースコードを受け取ります。
+2. `lexer_init` が開始位置をゼロに設定します。
+3. `lexer_next_token` が空白を飛ばし、トークンを順に返します。
+4. `main.c` が `TOKEN_EOF` まで出力します。
+
+## English
+
+This is the lexer, the first stage of the TinyLang compiler. It splits source code such as `var x = 10 + 20 - 5;` into tokens.
+
+### Project structure
+
+The `include/` directory contains the lexer and token headers; `src/` contains the lexer implementation and main program. The root also contains the Makefile.
+
+### Build and run
+
+Run all commands from the `tinylang-c` directory containing the Makefile:
+
+```sh
+cd tinylang-c
+make
+make run
+```
+
+The sample output appears above. You can also pass source code directly:
+
+```sh
+./build/tinylang "var value = 7 + 5;"
+```
+
+With no argument, the program reads one line from standard input. Run `make clean` to remove build artifacts.
+
+### How it works
+
+1. `main.c` receives a line of source code.
+2. `lexer_init` sets the lexer's initial position to zero.
+3. `lexer_next_token` skips whitespace and returns tokens one at a time.
+4. `main.c` prints tokens until it encounters `TOKEN_EOF`.
+
+## 한국어
+
 TinyLang 컴파일러의 첫 단계인 Lexer입니다. 다음 코드를 토큰으로 나눕니다.
 
 ```text
@@ -80,38 +150,3 @@ make clean
 2. `lexer_init`이 Lexer의 시작 위치를 0으로 설정합니다.
 3. `lexer_next_token`이 공백을 건너뛰고 토큰을 하나씩 반환합니다.
 4. `main.c`가 `TOKEN_EOF`를 만날 때까지 토큰을 출력합니다.
-
----
-
-## English
-
-This is the lexer, the first stage of the TinyLang compiler. It splits source code such as `var x = 10 + 20 - 5;` into tokens.
-
-### Project structure
-
-The `include/` directory contains the lexer and token headers; `src/` contains the lexer implementation and main program. The root also contains the Makefile.
-
-### Build and run
-
-Run all commands from the `tinylang-c` directory containing the Makefile:
-
-```sh
-cd tinylang-c
-make
-make run
-```
-
-The sample output appears above. You can also pass source code directly:
-
-```sh
-./build/tinylang "var value = 7 + 5;"
-```
-
-With no argument, the program reads one line from standard input. Run `make clean` to remove build artifacts.
-
-### How it works
-
-1. `main.c` receives a line of source code.
-2. `lexer_init` sets the lexer's initial position to zero.
-3. `lexer_next_token` skips whitespace and returns tokens one at a time.
-4. `main.c` prints tokens until it encounters `TOKEN_EOF`.
