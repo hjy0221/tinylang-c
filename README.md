@@ -4,6 +4,8 @@
 
 ## 日本語
 
+[日本語](https://github.com/hjy0221/tinylang-c#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/tinylang-c#english) · [한국어](https://github.com/hjy0221/tinylang-c#%ED%95%9C%EA%B5%AD%EC%96%B4)
+
 TinyLangコンパイラの最初のステップであるLexerです。次のコードをトークンで除算します。
 
 ```text
@@ -87,6 +89,8 @@ make clean
 
 ## English
 
+[日本語](https://github.com/hjy0221/tinylang-c#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/tinylang-c#english) · [한국어](https://github.com/hjy0221/tinylang-c#%ED%95%9C%EA%B5%AD%EC%96%B4)
+
 Lexer is the first step of the TinyLang compiler. Split the following code into tokens:
 
 ```text
@@ -169,6 +173,8 @@ make clean
 4. `main.c` outputs tokens until it encounters `TOKEN_EOF`.
 
 ## 한국어
+
+[日本語](https://github.com/hjy0221/tinylang-c#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/tinylang-c#english) · [한국어](https://github.com/hjy0221/tinylang-c#%ED%95%9C%EA%B5%AD%EC%96%B4)
 
 TinyLang 컴파일러의 첫 단계인 Lexer입니다. 다음 코드를 토큰으로 나눕니다.
 
